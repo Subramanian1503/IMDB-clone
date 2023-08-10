@@ -170,28 +170,29 @@ function renderFavouriteMovies() {
 
     const fav_movie_list = localStorage.getItem("movie_info").split(",");
 
-    // Iterate the movie list
-    for (let index = 0; index < fav_movie_list.length; index++) {
-        // Get the movie response from DB
-        let movie_name = fav_movie_list[index];
+    if (fav_movie_list) {
+        // Iterate the movie list
+        for (let index = 0; index < fav_movie_list.length; index++) {
+            // Get the movie response from DB
+            let movie_name = fav_movie_list[index];
 
-        // Construct the favourite DOM
+            // Construct the favourite DOM
 
-        // Add it to the favourite list
+            // Add it to the favourite list
 
-        // Get required movie title response from OMDB
-        $.ajax({
-            url: "http://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
-            type: "GET",
-            success: (movie_response) => {
+            // Get required movie title response from OMDB
+            $.ajax({
+                url: "http://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
+                type: "GET",
+                success: (movie_response) => {
 
-                // Check if the movie response is present
-                if (movie_response) {
+                    // Check if the movie response is present
+                    if (movie_response) {
 
-                    // If present, Get the movie details from response
+                        // If present, Get the movie details from response
 
-                    // Construct the movie detail DOM with required information
-                    const movie_DOM = $(`<li class="favourite_card_container" id="${movie_response.Title}">
+                        // Construct the movie detail DOM with required information
+                        const movie_DOM = $(`<li class="favourite_card_container" id="${movie_response.Title}">
 
                         <div class="fav_card_left">
                             <img src="${movie_response.Poster}" alt="movie_poster" height="100px" width="80px"
@@ -216,13 +217,13 @@ function renderFavouriteMovies() {
 
                     </li>`);
 
-                    // render the full page 
-                    $("#favourite_list").append(movie_DOM);
+                        // render the full page 
+                        $("#favourite_list").append(movie_DOM);
+                    }
                 }
-            }
-        })
+            })
+        }
     }
-
 }
 
 function removeFavFromList(event) {
