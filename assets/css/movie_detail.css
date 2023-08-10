@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#movie_detail_information {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* margin-left: 10px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#movie_title_header {
+    font-size: 60px;
+    color: white;
+    width: 1000px;
+    height: 75px;
+}
+
+#ratingsAndRuntime {
+    height: 30px;
+    width: 400px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+#star_rating_detail {
+    height: 40px;
+    width: 100px;
+    padding-top: 2px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#star_rating_detail .checked {
+    /* margin-top: 15px; */
+    color: yellow;
+}
+
+#IMDB_rating{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total_run_time{
+    margin-left: 5px;
+}
+
+#movie_description{
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.back_button_container{
+    position: absolute;
+    top: 600px;
+    left: 150px;
+    cursor: pointer;
+}
+
+.back_button{
+    border-radius: 59%;
+}

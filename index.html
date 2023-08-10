@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/movie_detail.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="movie_header" class="header">
+
+    </div>
+
+    <!-- home page container -->
+    <div id="home_container" class="home_view">
+
+        <!-- search bar -->
+        <div id="search_container" class="left_layout">
+
+            <!-- search bar -->
+            <div id="search_bar">
+
+                <!-- search input -->
+                <input type="text" name="search_query" id="search_input" class="search_input_bar">
+
+                <!-- search icon -->
+                <a href="/SEARCH_MOVIE" id="search_icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10905/10905219.png" alt="search_img_address"
+                        height="50px" width="50px">
+                </a>
+            </div>
+
+            <!-- search_result_container  -->
+            <div id="search_result_container">
+
+                <!-- search result list -->
+                <ul id="search_result_list">
+                                    </ul>
+            </div>
+
+        </div>
+
+        <!-- favourite movies list -->
+        <div id="favourite_container" class="right_layout">
+
+            <!-- favourite list header -->
+            <div id="favourite_header" class="container_header">
+                Favourites
+            </div>
+
+            <!-- favourite list -->
+            <div id="favourite_list_container">
+                <ul id="favourite_list" class="movie_list">
+                </ul>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- footer -->
+    <div id="footer_header" class="footer">
+
+    </div>
+
+    <script src="./assets/scripts/home.js"></script>
+
+</body>
+
+</html>
