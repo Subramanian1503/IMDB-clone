@@ -27,7 +27,7 @@ function searchMovie(event) {
 
     // Get response for the provided input
     const movie_list_response = $.ajax({
-        url: "http://www.omdbapi.com/?s=" + search_query + "&apikey=f27ad85c",
+        url: "https://www.omdbapi.com/?s=" + search_query + "&apikey=f27ad85c",
         type: "GET",
         success: (movie_list) => {
 
@@ -111,7 +111,7 @@ function addToFavourite(event) {
 
         // Add movie into favourite
         $.ajax({
-            url: "http://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
+            url: "https://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
             type: "GET",
             success: (movie_response) => {
 
@@ -184,7 +184,7 @@ function renderFavouriteMovies() {
 
                 // Get required movie title response from OMDB
                 $.ajax({
-                    url: "http://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
+                    url: "https://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
                     type: "GET",
                     success: (movie_response) => {
 
@@ -261,7 +261,7 @@ function showFullMovieDetail(event) {
 
     // Get required movie title response from OMDB
     $.ajax({
-        url: "http://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
+        url: "https://www.omdbapi.com/?t=" + movie_name + "&apikey=f27ad85c",
         type: "GET",
         success: (movie_response) => {
 
