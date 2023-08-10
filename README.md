@@ -10,3 +10,4 @@ This application is a clone of IMDB where we can search for movies and find info
 * On clicking the add to fav button, the user can add the search result to the favourite section which was showing at the right panel of the UI.
 * And from the favourite list the user can able to remove the movie added before
 * On clicking the movie search result, the user can able to view the full movie details
+* Favourite movies list are getting stored in local storage
