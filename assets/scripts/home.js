@@ -107,7 +107,14 @@ function addToFavourite(event) {
 
     const fav_list_movies = localStorage.getItem("movie_info");
 
-    if (movie_name && fav_list_movies.includes(movie_name) === false) {
+    let isFavNotAvailable = true; 
+    if(fav_list_movies){
+        if(fav_list_movies.includes(movie_name) === true){
+            isFavNotAvailable = false;
+        }
+    }
+
+    if (movie_name && isFavNotAvailable === true) {
 
         // Add movie into favourite
         $.ajax({
